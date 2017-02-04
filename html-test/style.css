@@ -1,0 +1,60 @@
+  html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    } 
+    p {
+        text-align:justify;
+    }
+    .navigation {
+        height: 100%;
+        padding-right: 13px;
+        width: 20%;
+        border-right: solid black 1px;
+    }
+    .navigation h3 {
+        margin-bottom: 5px;
+    }
+    .navigation ul{
+        margin-top: 5px;
+    }
+    .article-content {
+        padding-left: 13px;
+        width: 100%;
+        display: inline-block;
+    }
+
+    dt{
+        text-align: center;
+        display: inline;
+    }
+    .content {
+        display: table;
+        width: 100%;
+    }
+    .content > * {
+        display: table-cell;
+    }
+   .toolbar-button, 
+   .form-button {
+       color: white;
+       text-decoration: none;
+       background: #999;
+   }
+   .toolbar-button {
+      width: 120px;
+      box-sizing: border-box;
+      padding: 13px;
+      display: inline-block;
+   }
+   .toolbar-button:hover, 
+   .form-button:hover {
+       background: #8AAFEB
+   }
+   .selected,
+   .selected:hover{
+       background: #555;
+       cursor: default;
+       
+   }
+

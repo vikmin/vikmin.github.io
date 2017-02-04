@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>form</title>
+    <link rel="stylesheet" href="../style.css"></link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/html-test/script.js"></script>
+    <script>
+        initNavigation("form");
+    </script>
+    <script>
+        function formSubmit() {
+            var output = "Hello ";
+            
+            if (form.gender.value === "male")
+                output += "Mr. "
+            else if (form.gender.value === "female")
+                output += "Mrs. "
+
+            if (form.name.value === "")
+                output += "Stranger";
+            else
+                output += form.name.value;
+
+            output += " from ";
+
+            if (form.company.value === "")
+                output += "Stranger Corp"
+            else
+                output += form.company.value;
+
+            window.alert(output + ".");
+        }
+    </script>
+</head>
+<body>
+<div style="width: 50%; background: lightblue; margin: auto; padding: 13px">
+    <nav id="navigation-placeholder"></nav>
+    <article class="article-content">
+        <div style="text-align: center;"> 
+            <h1 style="font-family: courier; font-style: italic; "> Hello World! </h1>
+           
+            <form name="form" style="text-align: left; width: 200px; margin: 0 auto;" onSubmit="event.preventDefault(); formSubmit();">
+                Company:<br>
+                <input type="text" name="company"><br>
+                Name:<br>
+                <input type="text" name="name"><br>
+                <input type="radio" name="gender" value="male" checked> Male<br>
+                <input type="radio" name="gender" value="female"> Female<br>
+                <input type="radio" name="gender" value="other"> Other<br>
+                <input class="form-button" type="submit" name="submit" value="Submit">
+                <input class="form-button" type="reset" name="reset" value="Reset">
+            </form>
+
+            <!-- Kommentar -->
+                
+        </div>
+    </article>
+</div>
+</body>
+</html>
